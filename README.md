@@ -146,7 +146,7 @@ While the average response was 200 some milliseconds, keep in mind this includes
 Lambda function execute in under one millisecond when using test data and invoking from the AWS Lambda dashboard.
 
 Even though we're talking nanoseconds in some cases, it still doesn't matter because we're billed for 100ms minimum.
-Well, it doesn't matter ___that much...___It matters in the sense that perhaps this function in Go executed under 100ms, 
+Well, _it doesn't matter that much_...It matters in the sense that perhaps this function in Go executed under 100ms, 
 while one in Node.js executed anywhere over 100ms. Then over enough requests, it will maybe be noticably cheaper to use Go. 
 Maybe. Depends on how many requests. I should be fair in mentioning that, though it won't matter for many.
 
