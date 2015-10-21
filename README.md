@@ -1,5 +1,3 @@
-# lambda-geoip
-
 This is a simple example of Go for AWS Lambda using a Node.js wrapper. Follow along here and you should have 
 a pretty fun IP -> geoloacation service at the end of it. A really inexpensive service at that.
 
