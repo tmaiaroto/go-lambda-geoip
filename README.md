@@ -1,5 +1,6 @@
 This is a simple example of Go for AWS Lambda using a Node.js wrapper. Follow along here and you should have 
-a pretty fun IP -> geoloacation service at the end of it. A really inexpensive service at that.
+a pretty fun IP -> geoloacation service at the end of it. A really inexpensive service at that. This is a 
+follow up to [an article I wrote here.](https://medium.com/@shift8creative/go-amazon-lambda-7e95a147cec8#.ab93bgu8s)
 
 ## Instructions
 
