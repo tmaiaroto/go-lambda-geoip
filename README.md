@@ -135,8 +135,9 @@ I would like to see what would happen if I stored the database in a memory mappe
 help matters when working with larger data sets. Of course there's always DynamoDB or RDS or something...But what's
 going to be faster and easier for deployment?
 
-I threw some load at the API, about 5,000 requests 10 at a time. It averaged 46 some requests per second. Between 
-all my testing and this light load test, I think I was billed $0.03. So Lambda is quite inexpensive.
+I threw some load at the API, about 5,000 requests 10 at a time (arguably not the most extensive load test - but I was 
+also load testing my wallet). It averaged 46 some requests per second. Between all my testing and this light load test, 
+I think I was billed $0.03. So Lambda is quite inexpensive. Happy service. Happy wallet.
 
 The fastest response was 0.1677 seconds. The average was 0.2146 and of course your milage will vary. There's many
 things to consider, including the region and your connection to the internet.
@@ -148,6 +149,12 @@ Even though we're talking nanoseconds in some cases, it still doesn't matter bec
 Well, _it doesn't matter that much_...It matters in the sense that perhaps this function in Go executed under 100ms, 
 while one in Node.js executed anywhere over 100ms. Then over enough requests, it will maybe be noticably cheaper to use Go. 
 Maybe. Depends on how many requests. I should be fair in mentioning that, though it won't matter for many.
+
+Also note there were zero errors in all of my testing. All API responses were HTTP 200 and they all had JSON data
+returned with a location.
+
+Amazon caps the concurrent requests at 100. My testing had it almost half way there. It simply didn't skip a beat.
+You can ask them to uncap that if you need more.
 
 The Lambda function itself can execute quite quickly once warm, but the API Gateway can take a bit longer to 
 deliver your response. However, it's still quite fast. I do believe Lambda + API Gateway is a viable solution.
