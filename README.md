@@ -5,7 +5,7 @@ follow up to [an article I wrote here.](https://medium.com/@shift8creative/go-am
 ## Instructions
 
 ### Prerequisites
-First, you need an AWS account of course. After that, you'll need to download Maxmind's GeoLite2 City database. 
+First, you need an AWS account of course. After that, you'll need to download [Maxmind's GeoLite2 City database.](http://dev.maxmind.com/geoip/geoip2/geolite2/) 
 The filename will likely be ```GeoLite2-City.mmdb```.
 
 You can't run the Go program locally unfortunately. Though I'm going to see if there's a way to send the input 
