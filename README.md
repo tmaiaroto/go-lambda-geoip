@@ -8,7 +8,7 @@ follow up to [an article I wrote here.](https://medium.com/@shift8creative/go-am
 First, you need an AWS account of course. After that, you'll need to download [Maxmind's GeoLite2 City database.](http://dev.maxmind.com/geoip/geoip2/geolite2/) 
 The filename will likely be ```GeoLite2-City.mmdb```.
 
-You can't run the Go program locally unfortunately. Aactually you can, when ran, it will be in a loop and will be looking for messages from stdin...So if you know the JSON message format to send you could type that into your console and get a response, but any error in that message format will cause errors in loops. So I'm going to see if there's a way to send the input required and simulate Lambda in an easier way. For now, you'll just want to run it in Lambda.
+You can't run the Go program locally unfortunately. Actually you can, when ran, it will be in a loop and will be looking for messages from stdin...So if you know the JSON message format to send you could type that into your console and get a response, but any error in that message format will cause errors in loops. So I'm going to see if there's a way to send the input required and simulate Lambda in an easier way. For now, you'll just want to run it in Lambda.
 
 I've included a pre-compiled binary for you, but you'd normally then compile for Linux.
 
